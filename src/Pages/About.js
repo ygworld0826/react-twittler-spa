@@ -1,8 +1,10 @@
 import React from 'react';
 import './About.css';
-import Footer from "../Footer"
+import Footer from "../Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUsers } from "@fortawesome/free-solid-svg-icons"; // ✅ FontAwesome Import
 
-const About = (props) => {
+const About = () => {
   return (
     <section className="aboutTwittler">
       <div className="aboutTwittler__container">
@@ -12,11 +14,14 @@ const About = (props) => {
           </div>
         </div>
       </div>
+
+      {/* ✅ Updated FontAwesome icon usage */}
       <div className="aboutTwittler__content">
-        <i className="fas fa-users"></i>
+        <FontAwesomeIcon icon={faUsers} />
         <p>나만의 Twittler 소개페이지를 꾸며보세요.</p>
       </div>
-      <Footer />
+
+      <Footer /> {/* ✅ Ensured Footer is correctly imported */}
     </section>
   );
 };
